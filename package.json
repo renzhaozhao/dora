@@ -1,7 +1,11 @@
 {
     "private": true,
     "entry": {
-        "index": "./app/index.js"
+        "index": "./app/index.jsx",
+        "vendor": [
+            "react",
+            "react-dom"
+        ]
     },
     "dependencies": {
         "antd": "^2.1.0",
@@ -19,7 +23,8 @@
         "dora-plugin-webpack-hmr": "^0.2.1"
     },
     "scripts": {
-        "build": "atool-build",
-        "start": "dora --plugins \"webpack,webpack-hmr\""
+        "build": "set NODE_ENV=dev&&atool-build",
+        "start": "dora --plugins \"webpack,webpack-hmr\" --port 8001",
+        "prod": "set NODE_ENV=production&&atool-build"
     }
 }
