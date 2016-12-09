@@ -2,6 +2,7 @@ import React from 'react';
 import {DatePicker,Pagination} from 'antd';
 import moment from 'moment';
 import Hello from './Hello';
+import Star from './Star';
 import {ajax} from 'jquery';
 
 const dateFormat = 'YYYY/MM/DD';
@@ -57,6 +58,7 @@ class App extends React.Component {
                 <h1 id="test">Hello, world!<span>asdas</span></h1>
                 <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
                 <Hello name="renzhao"/>
+                <Star count="4"/>
                 <Pagination defaultCurrent={1} total={500} onChange={this.changePage}/>
             </div>
         );
